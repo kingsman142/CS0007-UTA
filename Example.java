@@ -44,7 +44,8 @@ public class Example{
 		int regularHoursWorked = getHoursWorked();
 		double regularHourlyRate = getHourlyRate();
 
+		System.out.println("Welcome " + name + "!");
 		System.out.printf("Welcome %s! You have worked %d hours at a rate of $%.2f per hour.", name, regularHoursWorked, regularHourlyRate);
 	}
-	
+
 }
