@@ -17,7 +17,7 @@ public class P1_A3{
 	}
 
 	public static void main(String[] args){
-		double rateHourly = 0.0; //Regular hourly pay rate
+		double rateHourly = getHourlyRate(); //Regular hourly pay rate
 		double rateOvertime = 0.0; //Overtime hourly pay rate
 		double rent = 0.0; //Cost of rent
 		double electricBillPercent = 0.0; //Percent of bill that goes to electric
@@ -32,5 +32,7 @@ public class P1_A3{
 		String name = promptUserName(); //Call the promptUserName method to store the user's name
 
 		System.out.printf("My name is %s.  This program will create a budget calculator.\n", name);
+
+		System.out.println("Welcome " + name + "! THis proggram...");
 	}
 }
