@@ -14,7 +14,7 @@ program will specify if the user wins or loses.
 import java.util.Scanner; // needed for the scanner class
 import java.util.Random; // needed for the random class
 
-public class P2A4_MCKESSY
+public class P2A4_MCKESSY_3854185
 {
 	public static void main(String[] args)
 	{
@@ -39,22 +39,26 @@ public class P2A4_MCKESSY
 		Random dice = new Random(); // create an instance of the random class and assign address
 		int roll1 = dice.nextInt(6) + 1; // the variable for the first roll
 		int roll2 = dice.nextInt(6) + 1; // the variable for the second roll
-		int rollTotal = roll1 + roll2; // the variable of the total of the two rolls
+		final int rollTotal = roll1 + roll2; // the variable of the total of the two rolls
 
 		System.out.println("\nYour 'big start roll' totals to " + rollTotal + ".");
 		// to display the user's total
 
+
 		if (rollTotal == (5) || rollTotal == (10)) // to determine if the user has winning numbers
 		{
 			System.out.print("\nYou got a " + rollTotal + ", so you win!\n");
+
 		}
 		else if	(rollTotal == (2) || rollTotal == (4)) // to determine if the user has losing numbers
 		{
 			System.out.print("\nYou got a " + rollTotal + ", so you lose!\n");
+
 		}
 		else if (rollTotal == (11)) // to determine if the user has losing numbers
 		{
 			System.out.print("\nYou got a " + rollTotal + ", so you lose!\n");
+
 		}
 		else // if the user has not won or lost yet, display this message to continue the game
 		{
@@ -62,28 +66,38 @@ public class P2A4_MCKESSY
 			System.out.println("\nYou must roll again. If you get a 5, you lose. If your");
 			System.out.println("new roll total matches your big start roll, you win!");
 			System.out.println("Otherwise, we'll keep rolling.");
-			System.out.println("\nYou must match " + rollTotal + "to win.\n");
+			System.out.println("\nYou must match " + rollTotal + " to win.\n");
 
 			// roll the dice again
-			Random dice2 = new Random();
-			int roll3 = dice2.nextInt(6) + 1;
-			int roll4 = dice2.nextInt(6) + 1;
-			int newTotal = roll3 + roll4;
 
-			do {
-				System.out.println("\nYou rolled a " + newTotal + ". Roll again!");
-			}
-			while ((newTotal != rollTotal) || (newTotal != (5)));
+			int roll3;
+			int roll4;
+			int newTotal;
 
-			if (newTotal == 5)
+			do
 			{
-				System.out.println("\nYou rolled a 5. You lose!");
-			}
-			else if (newTotal == rollTotal)
-			{
-				System.out.println("\nYou rolled a " + newTotal + ". This matches your");
-				System.out.println("'big start roll,' so YOU WIN!");
-			}
+				//Generates new random numbers every time this loop iterates
+				roll3 = dice.nextInt(6) + 1;
+				roll4 = dice.nextInt(6) + 1;
+				newTotal = roll3 + roll4;
+
+				System.out.println("\nLet's roll again!");
+				System.out.println("\nYou rolled " + newTotal + ".");
+
+				if (newTotal == 5)
+					{
+					System.out.println("\nYou rolled a 5. You lose!");
+					}
+				else if (newTotal == rollTotal)
+					{
+					System.out.println("\nYou matched the match number! You win!");
+					}
+				else
+					{
+					System.out.println("\nYou must continue playing.");
+					}
+			} while ((newTotal!= rollTotal) && (newTotal != 5));
+
 		}
 	}
 }
