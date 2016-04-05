@@ -66,13 +66,20 @@ public class P3_A3{
 		if(letter.length() > 1){
 			if(letter.equals(word)){
 				numBlanks = 0;
+				int count = 0;
+				for(char a: word.toCharArray()){
+					lett = letter.charAt(count);
+					wordArr[count++] = lett;
+				}
 				return true;
 			} else return false;
 		} else lett = letter.charAt(0);
 
-		if(guessedLetters.contains(lett)){
+		if(guessedLetters.contains(letter)){
 			System.out.println("You already guessed that!");
 			return true;
+		} else{
+			guessedLetters.add(letter);
 		}
 
 		for(char a: word.toCharArray()){
