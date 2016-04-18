@@ -6,5 +6,4 @@ for the semester of Spring 2016.
 
 This experience required me to keep track of paperwork such as recitation attendance and participation, weekly status reports,
 and weekly powerpoints covering recent material, while also providing me with valuable teaching experience of beginners
-to computer science and programming in general.  This greatly helped me recognize my desire to help others learn about my passion
-and hopefully recruit others into the field at a very beginning stage.
+to computer science and programming in general.  Working as a teaching assistant greatly helped me recognize my desire to help others learn about my passion and hopefully recruit others into the field at a very early stage.
